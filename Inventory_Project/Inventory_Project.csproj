@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{ECE456BF-5006-456E-9BD9-8D9134385143}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Inventory_Project</RootNamespace>
+    <AssemblyName>Inventory_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="info.xaml.cs">
+      <DependentUpon>info.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="inventoryinfo.xaml.cs">
+      <DependentUpon>inventoryinfo.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\WPFAssemblyInfo.cs">
+      <DependentUpon>total unsold.png</DependentUpon>
+    </Compile>
+    <Compile Include="sellproduct.xaml.cs">
+      <DependentUpon>sellproduct.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="info.xaml" />
+    <Page Include="inventoryinfo.xaml">
+      <DependentUpon>info.xaml</DependentUpon>
+    </Page>
+    <Page Include="sellproduct.xaml">
+      <DependentUpon>info.xaml</DependentUpon>
+    </Page>
+    <Page Include="Window1.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="4 BEVERAGES\aik 1.jpg" />
+    <None Include="4 BEVERAGES\aik 2.jpg" />
+    <None Include="4 BEVERAGES\aik 3.jpg" />
+    <None Include="4 BEVERAGES\aik 4.jpg" />
+    <None Include="4 BEVERAGES\birch 1.jpg" />
+    <None Include="4 BEVERAGES\birch 2.jpg" />
+    <None Include="4 BEVERAGES\birch 3.jpg" />
+    <None Include="4 BEVERAGES\birch 4.jpg" />
+    <None Include="4 BEVERAGES\bundaberg 1.jpg" />
+    <None Include="4 BEVERAGES\bundaberg 2.png" />
+    <None Include="4 BEVERAGES\bundaberg 3.png" />
+    <None Include="4 BEVERAGES\bundaberg 4.jpg" />
+    <None Include="4 BEVERAGES\calpis 1.jpg" />
+    <None Include="4 BEVERAGES\calpis 2.jpg" />
+    <None Include="4 BEVERAGES\calpis 3.jpg" />
+    <None Include="4 BEVERAGES\calpis 4.jpg" />
+    <None Include="4 BEVERAGES\dragon 1.jpg" />
+    <None Include="4 BEVERAGES\dragon 2.jpg" />
+    <None Include="4 BEVERAGES\dragon 3.jpg" />
+    <None Include="4 BEVERAGES\dragon 4.jpg" />
+    <None Include="4 BEVERAGES\ensre 2.jpg" />
+    <None Include="4 BEVERAGES\ensure 1.jpg" />
+    <None Include="4 BEVERAGES\ensure 3.jpg" />
+    <None Include="4 BEVERAGES\ensure 4.jpg" />
+    <None Include="4 BEVERAGES\green 2.jpg" />
+    <None Include="4 BEVERAGES\Green 3.png" />
+    <None Include="4 BEVERAGES\green 4.jpg" />
+    <None Include="4 BEVERAGES\grren 1.jpg" />
+    <None Include="4 BEVERAGES\jolly 1.jpg" />
+    <None Include="4 BEVERAGES\jolly 2.jpg" />
+    <None Include="4 BEVERAGES\jolly 3.jpg" />
+    <None Include="4 BEVERAGES\jolly 4.jpg" />
+    <None Include="4 BEVERAGES\lipton 1.jpg" />
+    <None Include="4 BEVERAGES\lipton 2.jpg" />
+    <None Include="4 BEVERAGES\lipton 3.jpg" />
+    <None Include="4 BEVERAGES\lipton 4.jpg" />
+    <None Include="4 BEVERAGES\nestea 1.jpg" />
+    <None Include="4 BEVERAGES\nestea 2.jpg" />
+    <None Include="4 BEVERAGES\nestea 3.jpg" />
+    <None Include="4 BEVERAGES\nestea4.jpg" />
+    <None Include="4 BEVERAGES\pine 1.jpg" />
+    <None Include="4 BEVERAGES\pine 2.jpg" />
+    <None Include="4 BEVERAGES\pine 3.jpg" />
+    <None Include="4 BEVERAGES\pine 4.jpg" />
+    <None Include="4 BEVERAGES\pineapple 1.jpg" />
+    <None Include="4 BEVERAGES\pineapple 2.jpg" />
+    <None Include="4 BEVERAGES\pineapple 3.jpg" />
+    <None Include="4 BEVERAGES\pineapple 4.jpg" />
+    <None Include="4 BEVERAGES\richarge 1.jpg" />
+    <None Include="4 BEVERAGES\richarge 2.jpg" />
+    <None Include="4 BEVERAGES\richarge 3.jpg" />
+    <None Include="4 BEVERAGES\richarge 4.jpg" />
+    <None Include="4 BEVERAGES\sprite 3.jpg" />
+    <None Include="4 BEVERAGES\sprite 4.jpg" />
+    <None Include="4 BEVERAGES\sprite1.jpg" />
+    <None Include="4 BEVERAGES\sprite2.jpg" />
+    <None Include="4 BEVERAGES\tang 2.jpg" />
+    <None Include="4 BEVERAGES\tang 3.jpg" />
+    <None Include="4 BEVERAGES\tang 4.jpg" />
+    <None Include="4 BEVERAGES\tang1.jpg" />
+    <None Include="4 BEVERAGES\vita 1.jpg" />
+    <None Include="4 BEVERAGES\vita 2.jpg" />
+    <None Include="4 BEVERAGES\vita 3.jpg" />
+    <None Include="4 BEVERAGES\vita 4.jpg" />
+    <None Include="app.config" />
+    <Resource Include="exit.jpg" />
+    <None Include="MEDICINE\alaxan 1.jpg" />
+    <None Include="MEDICINE\alaxan 2.jpg" />
+    <None Include="MEDICINE\alaxan 3.jpg" />
+    <None Include="MEDICINE\alaxan 4.jpg" />
+    <None Include="MEDICINE\Alaxan FR.png" />
+    <None Include="MEDICINE\allerkid 1.jpg" />
+    <None Include="MEDICINE\allerkid 2.jpg" />
+    <None Include="MEDICINE\allerkid 3.jpg" />
+    <None Include="MEDICINE\allerkid 4.jpg" />
+    <None Include="MEDICINE\Allerkid.jpg" />
+    <None Include="MEDICINE\appebon 1.jpg" />
+    <None Include="MEDICINE\appebon 2.jpg" />
+    <None Include="MEDICINE\appebon 3.jpg" />
+    <None Include="MEDICINE\appebon 4.jpg" />
+    <None Include="MEDICINE\Appebon Kid.jpg" />
+    <None Include="MEDICINE\ascorbic 1.jpg" />
+    <None Include="MEDICINE\ascorbic 2.jpg" />
+    <None Include="MEDICINE\ascorbic 3.jpg" />
+    <None Include="MEDICINE\ascorbic 4.jpg" />
+    <None Include="MEDICINE\ascorbic acid.jpg" />
+    <None Include="MEDICINE\biogesic  1.jpg" />
+    <None Include="MEDICINE\biogesic 2.jpg" />
+    <None Include="MEDICINE\biogesic 3.jpg" />
+    <None Include="MEDICINE\biogesic 4.png" />
+    <None Include="MEDICINE\buscopan 1.jpg" />
+    <None Include="MEDICINE\buscopan 2.jpg" />
+    <None Include="MEDICINE\buscopan 3.jpg" />
+    <None Include="MEDICINE\buscopan 4.jpg" />
+    <None Include="MEDICINE\buscopan.jpg" />
+    <None Include="MEDICINE\cole 1.jpg" />
+    <None Include="MEDICINE\cole 2.jpg" />
+    <None Include="MEDICINE\cole 3.jpg" />
+    <None Include="MEDICINE\cole 4.jpg" />
+    <None Include="MEDICINE\Colecalciferol.jpg" />
+    <None Include="MEDICINE\decolgen 1.jpg" />
+    <None Include="MEDICINE\decolgen 2.jpg" />
+    <None Include="MEDICINE\decolgen 3.jpg" />
+    <None Include="MEDICINE\decolgen 4.jpg" />
+    <None Include="MEDICINE\Decolgen Forte.jpg" />
+    <None Include="MEDICINE\dolfenal 1.jpg" />
+    <None Include="MEDICINE\dolfenal 2.jpg" />
+    <None Include="MEDICINE\dolfenal 3.jpg" />
+    <None Include="MEDICINE\dolfenal 4.jpg" />
+    <None Include="MEDICINE\Dolfenal.jpg" />
+    <None Include="MEDICINE\ferlin 1.jpg" />
+    <None Include="MEDICINE\ferlin 2.jpg" />
+    <None Include="MEDICINE\ferlin 3.jpg" />
+    <None Include="MEDICINE\ferlin 4.jpg" />
+    <None Include="MEDICINE\ferlin.jpg" />
+    <None Include="MEDICINE\loperamide 1.jpg" />
+    <None Include="MEDICINE\loperamide 2.jpg" />
+    <None Include="MEDICINE\loperamide 3.jpg" />
+    <None Include="MEDICINE\loperamide 4.jpg" />
+    <None Include="MEDICINE\Loperamide.jpg" />
+    <None Include="MEDICINE\medicol 1.jpg" />
+    <None Include="MEDICINE\medicol 2.jpg" />
+    <None Include="MEDICINE\medicol 3.jpg" />
+    <None Include="MEDICINE\medicol 4.jpg" />
+    <None Include="MEDICINE\Medicol Advance.png" />
+    <None Include="MEDICINE\nutriflex 1 .jpg" />
+    <None Include="MEDICINE\nutriflex 2.jpg" />
+    <None Include="MEDICINE\nutriflex 3.jpg">
+      <DependentUpon>Oral Rehydration Salt.jpg</DependentUpon>
+    </None>
+    <None Include="MEDICINE\nutriflex 4.jpg" />
+    <None Include="MEDICINE\Nutroplex.jpg" />
+    <None Include="MEDICINE\Oral Rehydration Salt.jpg" />
+    <None Include="MEDICINE\ors 1.jpg" />
+    <None Include="MEDICINE\ors 2.jpg" />
+    <None Include="MEDICINE\ors 3.jpg" />
+    <None Include="MEDICINE\ors 4.jpg" />
+    <None Include="MEDICINE\paracetamol.jpg" />
+    <None Include="MEDICINE\solmux 1.jpg" />
+    <None Include="MEDICINE\solmux 2.jpg" />
+    <None Include="MEDICINE\solmux 3.jpg" />
+    <None Include="MEDICINE\solmux 4.jpg" />
+    <None Include="MEDICINE\solmux.jpg" />
+    <None Include="MEDICINE\Tambal Para sa Iniwan %281%29.xlsx" />
+    <None Include="Shoes\mamba rage.jpg" />
+    <None Include="Shoes\shoes.xlsx" />
+    <Resource Include="backnew.jpg">
+      <Link>Properties\backnew.jpg</Link>
+    </Resource>
+    <Resource Include="Beauty Products\bb.jpg" />
+    <None Include="Beauty Products\blush.jpg" />
+    <None Include="Beauty Products\eyemakeupremover.jpg" />
+    <None Include="Beauty Products\facemakeup.jpg" />
+    <None Include="Beauty Products\gg.jpg" />
+    <None Include="Beauty Products\liquideyelash.jpg" />
+    <None Include="Beauty Products\prof.jpg" />
+    <None Include="Beauty Products\Shopee_4b8c3018e4ee05e4bc9462f2c899c86b.jpg" />
+    <None Include="Beauty Products\Shopee_a7a15687f420bc8479e615f1e1120248.jpg" />
+    <None Include="Beauty Products\Shopee_b4124c865ef67bd10fc41f0f32c4b825.jpg" />
+    <None Include="Beauty Products\Shopee_edc5108602733f59259c582e8e63dc54.jpg" />
+    <None Include="Beauty Products\Shopee_f2421c355c08060a412d19e492f0abeb.jpg" />
+    <None Include="Beauty Products\super.jpg" />
+    <None Include="Beauty Products\tinted.jpg" />
+    <None Include="Beauty Products\twoway.jpg" />
+    <Resource Include="beverage.png">
+      <Link>Properties\beverage.png</Link>
+    </Resource>
+    <Resource Include="BEVRERAGES PIC\aik.jpg" />
+    <None Include="BeautyProductsss\Belo1.jpg" />
+    <None Include="BeautyProductsss\Belo2.jpg" />
+    <None Include="BeautyProductsss\Belo3.jpg" />
+    <None Include="BeautyProductsss\Belo4.jpg" />
+    <None Include="BeautyProductsss\Bio1.jpg" />
+    <None Include="BeautyProductsss\Bio2.jpg" />
+    <None Include="BeautyProductsss\Bio3.jpg" />
+    <None Include="BeautyProductsss\Bio4.jpg" />
+    <None Include="BeautyProductsss\BLK1.jpg" />
+    <None Include="BeautyProductsss\BLK2.jpg" />
+    <None Include="BeautyProductsss\BLK3.jpg" />
+    <None Include="BeautyProductsss\BLK4.jpg" />
+    <None Include="BeautyProductsss\Colourette1.jpg" />
+    <None Include="BeautyProductsss\Colourette2.jpg" />
+    <None Include="BeautyProductsss\Colourette3.jpg" />
+    <None Include="BeautyProductsss\Colourette4.jpg" />
+    <None Include="BeautyProductsss\Fashion21_1.jpg" />
+    <None Include="BeautyProductsss\Fashion21_2.jpg" />
+    <None Include="BeautyProductsss\Fashion21_3.jpg" />
+    <None Include="BeautyProductsss\Fashion21_4.jpg" />
+    <None Include="BeautyProductsss\Gladking1.jpg" />
+    <None Include="BeautyProductsss\Gladking2.jpg" />
+    <None Include="BeautyProductsss\Gladking3.jpg" />
+    <None Include="BeautyProductsss\Gladking4.jpg" />
+    <None Include="BeautyProductsss\HumanNature1.jpg" />
+    <None Include="BeautyProductsss\HumanNature2.jpg" />
+    <None Include="BeautyProductsss\HumanNature3.jpg" />
+    <None Include="BeautyProductsss\HumanNature4.jpg" />
+    <None Include="BeautyProductsss\Innis1.jpg" />
+    <None Include="BeautyProductsss\Innis2.jpg" />
+    <None Include="BeautyProductsss\Innis3.jpg" />
+    <None Include="BeautyProductsss\Innis4.jpg" />
+    <None Include="BeautyProductsss\Maybelline1.jpg" />
+    <None Include="BeautyProductsss\Maybelline_2.jpg" />
+    <None Include="BeautyProductsss\Maybelline_3.jpg" />
+    <None Include="BeautyProductsss\Maybelline_4.jpg" />
+    <None Include="BeautyProductsss\Misline1.jpg" />
+    <None Include="BeautyProductsss\Misline3.jpg" />
+    <None Include="BeautyProductsss\Misline_2.jpg" />
+    <None Include="BeautyProductsss\Misline_4.jpg" />
+    <None Include="BeautyProductsss\NYX1.jpg" />
+    <None Include="BeautyProductsss\NYX2.jpg" />
+    <None Include="BeautyProductsss\NYX3.jpg" />
+    <None Include="BeautyProductsss\NYX4.jpg" />
+    <None Include="BeautyProductsss\Rucy1.jpg" />
+    <None Include="BeautyProductsss\Rucy2.jpg" />
+    <None Include="BeautyProductsss\Rucy3.jpg" />
+    <None Include="BeautyProductsss\Rucy4.jpg" />
+    <None Include="BeautyProductsss\SaceLady1.jpg" />
+    <None Include="BeautyProductsss\SaceLady2.jpg" />
+    <None Include="BeautyProductsss\SaceLady3.jpg" />
+    <None Include="BeautyProductsss\SaceLady4.jpg" />
+    <None Include="BeautyProductsss\Tony1.jpg" />
+    <None Include="BeautyProductsss\Tony2.jpg" />
+    <None Include="BeautyProductsss\Tony3.jpg" />
+    <None Include="BeautyProductsss\Tony4.jpg" />
+    <None Include="BeautyProductsss\Wet1.jpg" />
+    <None Include="BeautyProductsss\Wet2.jpg" />
+    <None Include="BeautyProductsss\Wet3.jpg" />
+    <None Include="BeautyProductsss\Wet4.jpg" />
+    <None Include="BEVRERAGES PIC\birch tree.jpg" />
+    <None Include="BEVRERAGES PIC\bundaberg.jpg" />
+    <None Include="BEVRERAGES PIC\calpis.jpg" />
+    <None Include="BEVRERAGES PIC\dragon fruit.jpg" />
+    <None Include="BEVRERAGES PIC\ensure.jpg" />
+    <None Include="BEVRERAGES PIC\green tea.jpg" />
+    <None Include="BEVRERAGES PIC\jolly.jpg" />
+    <None Include="BEVRERAGES PIC\lipton.jpg" />
+    <None Include="BEVRERAGES PIC\nestea.jpg" />
+    <None Include="BEVRERAGES PIC\pineapple.jpg" />
+    <None Include="BEVRERAGES PIC\richarge.jpg" />
+    <None Include="BEVRERAGES PIC\sprite.jpg" />
+    <None Include="BEVRERAGES PIC\tang.jpg" />
+    <None Include="BEVRERAGES PIC\vita plus.jpg" />
+    <Resource Include="button b.jpg" />
+    <Resource Include="button c.jpg" />
+    <Resource Include="button d.jpg" />
+    <Resource Include="button a.jpg" />
+    <Resource Include="cosmetics.png">
+      <Link>Properties\cosmetics.png</Link>
+    </Resource>
+    <Resource Include="dispose.png">
+      <Link>Properties\dispose.png</Link>
+    </Resource>
+    <Resource Include="med.png">
+      <Link>Properties\med.png</Link>
+    </Resource>
+    <Resource Include="mobile.png">
+      <Link>Properties\mobile.png</Link>
+    </Resource>
+    <None Include="Mobile\Apple iPhone X%281%29.jpg" />
+    <None Include="Mobile\Apple iPhone X%282%29.jpg" />
+    <None Include="Mobile\Apple iPhone X%283%29.jpg" />
+    <None Include="Mobile\Apple iPhone X%284%29.jpg" />
+    <None Include="Mobile\Apple iPhone X.jpeg" />
+    <None Include="Mobile\ASUS ROG Phone%281%29.jpg" />
+    <None Include="Mobile\ASUS ROG Phone%282%29.jpg" />
+    <None Include="Mobile\ASUS ROG Phone%283%29.jpg" />
+    <None Include="Mobile\ASUS ROG Phone%284%29.jpg" />
+    <None Include="Mobile\Asus ROG Phone.jpeg" />
+    <None Include="Mobile\Asus Zenfone 5Z%281%29.jpg" />
+    <None Include="Mobile\Asus Zenfone 5Z%282%29.jpg" />
+    <None Include="Mobile\Asus Zenfone 5Z%283%29.jpg" />
+    <None Include="Mobile\Asus Zenfone 5Z%284%29.jpg" />
+    <None Include="Mobile\Asus Zenfone 5Z.jpeg" />
+    <None Include="Mobile\Asus Zenfone Max Pro%281%29.jpg" />
+    <None Include="Mobile\Asus Zenfone Max Pro%282%29.jpg" />
+    <None Include="Mobile\Asus Zenfone Max Pro%283%29.jpg" />
+    <None Include="Mobile\Asus Zenfone Max Pro%284%29.jpg" />
+    <None Include="Mobile\Asus Zenfone Max Pro.jpeg" />
+    <None Include="Mobile\Huawei Nova 3i%281%29.jpg" />
+    <None Include="Mobile\Huawei Nova 3i%282%29.jpg" />
+    <None Include="Mobile\Huawei Nova 3i%283%29.jpg" />
+    <None Include="Mobile\Huawei Nova 3i%284%29.jpg" />
+    <None Include="Mobile\Huawei Nova 3i.jpeg" />
+    <None Include="Mobile\Mobile.xlsx" />
+    <None Include="Mobile\Nokia 7 Plus%281%29.jpg" />
+    <None Include="Mobile\Nokia 7 Plus%282%29.jpg" />
+    <None Include="Mobile\Nokia 7 Plus%283%29.jpeg" />
+    <None Include="Mobile\Nokia 7 Plus%284%29.jpg" />
+    <None Include="Mobile\Nokia 7 Plus.jpeg" />
+    <None Include="Mobile\Oppo F7%281%29.jpg" />
+    <None Include="Mobile\Oppo F7%282%29.jpg" />
+    <None Include="Mobile\Oppo F7%283%29.jpg" />
+    <None Include="Mobile\Oppo F7%284%29.jpg" />
+    <None Include="Mobile\Oppo F7.jpg" />
+    <None Include="Mobile\OPPO Find X%281%29.jpg" />
+    <None Include="Mobile\OPPO Find X%282%29.jpg" />
+    <None Include="Mobile\OPPO Find X%283%29.jpg" />
+    <None Include="Mobile\OPPO Find X%284%29.jpg" />
+    <None Include="Mobile\Oppo Find X.jpeg" />
+    <None Include="Mobile\Samsung Galaxy J7 Pro%281%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy J7 Pro%282%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy J7 Pro%283%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy J7 Pro%284%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy J7 Pro.jpeg" />
+    <None Include="Mobile\Samsung Galaxy S9%281%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy S9%282%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy S9%283%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy S9%284%29.jpg" />
+    <None Include="Mobile\Samsung Galaxy S9.jpeg" />
+    <None Include="Mobile\Vivo V11%281%29.jpg" />
+    <None Include="Mobile\Vivo V11%282%29.jpg" />
+    <None Include="Mobile\Vivo V11%283%29.jpg" />
+    <None Include="Mobile\Vivo V11%284%29.jpg" />
+    <None Include="Mobile\Vivo V11.jpeg" />
+    <None Include="Mobile\Vivo Y71%281%29.jpg" />
+    <None Include="Mobile\Vivo Y71%282%29.jpg" />
+    <None Include="Mobile\Vivo Y71%283%29.jpg" />
+    <None Include="Mobile\Vivo Y71%284%29.jpg" />
+    <None Include="Mobile\Vivo Y71.jpg" />
+    <None Include="Mobile\Xiaomi POCOPHONE F1%281%29.jpg" />
+    <None Include="Mobile\Xiaomi POCOPHONE F1%282%29.jpg" />
+    <None Include="Mobile\Xiaomi POCOPHONE F1%283%29.jpg" />
+    <None Include="Mobile\Xiaomi POCOPHONE F1%284%29.jpg" />
+    <None Include="Mobile\Xiaomi POCOPHONE F1.jpg" />
+    <None Include="Mobile\Xiaomi Redmi Note 5%281%29.jpg" />
+    <None Include="Mobile\Xiaomi Redmi Note 5%282%29.jpg" />
+    <None Include="Mobile\Xiaomi Redmi Note 5%283%29.jpg" />
+    <None Include="Mobile\Xiaomi Redmi Note 5%284%29.jpg" />
+    <None Include="Mobile\Xiaomi Redmi Note 5.png" />
+    <None Include="Mobile\Xiaomi Redmi S2.jpg" />
+    <None Include="Mobile\Xiaomi_ Redmi S2%281%29.jpg" />
+    <None Include="Mobile\Xiaomi_ Redmi S2%282%29.jpg" />
+    <None Include="Mobile\Xiaomi_ Redmi S2%283%29.jpg" />
+    <None Include="Mobile\Xiaomi_ Redmi S2%284%29.jpg" />
+    <Resource Include="purchase.png">
+      <Link>Properties\purchase.png</Link>
+    </Resource>
+    <Resource Include="return.png">
+      <Link>Properties\return.png</Link>
+    </Resource>
+    <Resource Include="sell.png">
+      <Link>Properties\sell.png</Link>
+    </Resource>
+    <Resource Include="shoe.png">
+      <Link>Properties\shoe.png</Link>
+    </Resource>
+    <None Include="Shoes\ambasador 7.1.jpg" />
+    <None Include="Shoes\ambasador 7.2.jpg" />
+    <None Include="Shoes\ambassador 7.3jpg.jpg" />
+    <None Include="Shoes\ambassador 7.5.jpg" />
+    <None Include="Shoes\ambassador 7.jpg" />
+    <None Include="Shoes\ambassador 7.jpg" />
+    <None Include="Shoes\KD 10.jpg" />
+    <None Include="Shoes\KD 10.jpg" />
+    <None Include="Shoes\kd 6.1.png" />
+    <None Include="Shoes\kd 6.2.png" />
+    <None Include="Shoes\kd 6.3png.png" />
+    <None Include="Shoes\kd 6.4.png" />
+    <None Include="Shoes\kd 6.jpg" />
+    <None Include="Shoes\kd 6.jpg" />
+    <None Include="Shoes\kd 7 floral.jpg" />
+    <None Include="Shoes\kd 7 floral.jpg" />
+    <None Include="Shoes\kd 8 elite.jpg" />
+    <None Include="Shoes\kd 8 elite.jpg" />
+    <None Include="Shoes\kd 9.jpg" />
+    <None Include="Shoes\kd 9.jpg" />
+    <None Include="Shoes\kd10.1.jpg" />
+    <None Include="Shoes\kd10.2.jpg" />
+    <None Include="Shoes\kd10.3.jpg" />
+    <None Include="Shoes\kd10.4.jpg" />
+    <None Include="Shoes\kd7.1.jpg" />
+    <None Include="Shoes\kd7.2.jpg" />
+    <None Include="Shoes\kd7.3.jpg" />
+    <None Include="Shoes\kd7.4.jpg" />
+    <None Include="Shoes\kd8.1.jpg" />
+    <None Include="Shoes\kd8.2.jpg" />
+    <None Include="Shoes\kd8.3.jpg" />
+    <None Include="Shoes\kd8.4.jpg" />
+    <None Include="Shoes\kd9.2.jpg" />
+    <None Include="Shoes\kd9.3.jpg" />
+    <None Include="Shoes\kd9.4.jpg" />
+    <None Include="Shoes\kd99.1.jpg" />
+    <None Include="Shoes\kobe A.D.1.jpg" />
+    <None Include="Shoes\kobe A.D.2.jpg" />
+    <None Include="Shoes\kobe A.D.3.jpg" />
+    <None Include="Shoes\kobe A.D.4.jpg" />
+    <None Include="Shoes\kobe A.D.jpg" />
+    <None Include="Shoes\kobe A.D.jpg" />
+    <None Include="Shoes\kobe IX.1.jpg" />
+    <None Include="Shoes\kobe IX.2.jpg" />
+    <None Include="Shoes\kobe IX.3.jpg" />
+    <None Include="Shoes\kobe IX.4.jpg" />
+    <None Include="Shoes\kobe IX.jpg" />
+    <None Include="Shoes\kobe IX.jpg" />
+    <None Include="Shoes\kobe xi.1.jpg" />
+    <None Include="Shoes\kobe xi.2.jpg" />
+    <None Include="Shoes\kobe xi.3.jpg" />
+    <None Include="Shoes\kobe xi.4.jpg" />
+    <None Include="Shoes\kobe xi.jpg" />
+    <None Include="Shoes\kobe xi.jpg" />
+    <None Include="Shoes\kobe xii.1.jpg" />
+    <None Include="Shoes\kobe xii.2.jpg" />
+    <None Include="Shoes\kobe xii.3.jpg" />
+    <None Include="Shoes\kobe xii.4.jpg" />
+    <None Include="Shoes\kobe xii.jpg" />
+    <None Include="Shoes\kobe xii.jpg" />
+    <None Include="Shoes\lebron 7 .4low.jpg" />
+    <None Include="Shoes\lebron 7 low.jpg" />
+    <None Include="Shoes\lebron 7 low.jpg" />
+    <None Include="Shoes\lebron 7.1 low.jpg" />
+    <None Include="Shoes\lebron 7.2 low.jpg" />
+    <None Include="Shoes\lebron 7.3 low.jpg" />
+    <None Include="Shoes\lebron soldier 10.1.jpg" />
+    <None Include="Shoes\lebron soldier 10.2.jpg" />
+    <None Include="Shoes\lebron soldier 10.3.jpg" />
+    <None Include="Shoes\lebron soldier 10.4.jpg" />
+    <None Include="Shoes\lebron soldier 10.jpg" />
+    <None Include="Shoes\lebron soldier 10.jpg" />
+    <None Include="Shoes\lebron witness 2.1.jpg" />
+    <None Include="Shoes\lebron witness 2.2.jpg" />
+    <None Include="Shoes\lebron witness 2.3.jpg" />
+    <None Include="Shoes\lebron witness 2.4.jpg" />
+    <None Include="Shoes\lebron witness 2.jpg" />
+    <None Include="Shoes\lebron witness 2.jpg" />
+    <None Include="Shoes\lebron xv ep 15.1.jpg" />
+    <None Include="Shoes\lebron xv ep 15.2.jpg" />
+    <None Include="Shoes\lebron xv ep 15.3.jpg" />
+    <None Include="Shoes\lebron xv ep 15.4.jpg" />
+    <None Include="Shoes\lebron xv ep 15.jpg" />
+    <None Include="Shoes\lebron xv ep 15.jpg" />
+    <None Include="Shoes\mamba rage.1.jpg" />
+    <None Include="Shoes\mamba rage.2.jpg" />
+    <None Include="Shoes\mamba rage.3.jpg" />
+    <None Include="Shoes\mamba rage.4.jpg" />
+    <None Include="Shoes\mamba rage.jpg" />
+    <Resource Include="sidetool.jpg" />
+    <Resource Include="total costumers.png">
+      <Link>Properties\total costumers.png</Link>
+    </Resource>
+    <Resource Include="total inv.png">
+      <Link>Properties\total inv.png</Link>
+    </Resource>
+    <Resource Include="total profit.png">
+      <Link>Properties\total profit.png</Link>
+    </Resource>
+    <Resource Include="total sold prod.png">
+      <Link>Properties\total sold prod.png</Link>
+    </Resource>
+    <Resource Include="total unsold.png">
+      <Link>Properties\total unsold.png</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="4 BEVERAGES" />
+    <Folder Include="Beauty Products" />
+    <Folder Include="BeautyProductsss" />
+    <Folder Include="BEVRERAGES PIC" />
+    <Folder Include="MEDICINE" />
+    <Folder Include="Mobile" />
+    <Folder Include="Shoes" />
+    <Folder Include="Shoes" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

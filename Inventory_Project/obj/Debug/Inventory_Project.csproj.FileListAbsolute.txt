@@ -1,0 +1,17 @@
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\bin\Debug\Inventory_Project.exe.config
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\bin\Debug\Inventory_Project.exe
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\bin\Debug\Inventory_Project.pdb
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Inventory_Project.csprojResolveAssemblyReference.cache
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Window1.baml
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Window1.g.cs
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\App.g.cs
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Inventory_Project_MarkupCompile.cache
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Inventory_Project.g.resources
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Inventory_Project.exe
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\Inventory_Project.pdb
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\info.baml
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\inventoryinfo.baml
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\sellproduct.baml
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\info.g.cs
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\inventoryinfo.g.cs
+C:\Users\zenit\Desktop\Inventory_Project\Inventory_Project\obj\Debug\sellproduct.g.cs
